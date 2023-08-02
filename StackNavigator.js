@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./Screens/HomeScreen";
+import LandingPage from "./Screens/LandingPage";
 import CreateAccount from "./Screens/CreateAccount";
-import ProfilePage from "./Screens/ProfilePage";
+import Home from "./Screens/Home";
 import SignIn from "./Screens/SignIn";
 
 const Stack = createNativeStackNavigator();
@@ -15,9 +15,9 @@ const StackNavigator = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Landing" component={LandingPage} />
       <Stack.Screen name="Create" component={CreateAccount} />
-      <Stack.Screen name="Profile" component={ProfilePage} />
+      <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="SignIn" component={SignIn} />
     </Stack.Navigator>
   );

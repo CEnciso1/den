@@ -22,7 +22,7 @@ const SignIn = ({ navigation }) => {
         password
       );
       setUser(response.user);
-      navigation.navigate("Profile");
+      navigation.navigate("Home");
     } catch (error) {}
   };
 
