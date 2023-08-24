@@ -37,8 +37,7 @@ const CreateAccount = ({ navigation }) => {
   const [showGender, setShowGender] = useState(false);
   const [showPhotos, setShowPhotos] = useState(false);
   const [photos, setPhotos] = useState([]);
-  const [photosData, setPhotosData] = useState();
-  const [loading, setLoading] = useState(false);
+  const [numPhotos, setNumPhotos] = useState();
 
   const emailInput = () => {
     const validateEmail = () => {
@@ -236,6 +235,7 @@ const CreateAccount = ({ navigation }) => {
         console.log(error);
       }
     }
+    setNumPhotos(photos.length);
     setShowPhotos(false);
     setShowName(true);
   };
@@ -372,6 +372,7 @@ const CreateAccount = ({ navigation }) => {
             dob: Timestamp.fromDate(
               new Date(dateArray[2], dateArray[0] - 1, dateArray[1])
             ),
+            numPhotos: numPhotos,
           });
           console.log("new user");
           navigation.navigate("Home");

@@ -8,7 +8,7 @@ const LogOut = ({ navigation }) => {
   const handleLogOut = () => {
     try {
       signOut(FIREBASE_AUTH);
-      navigation.navigate("Home");
+      navigation.navigate("Landing");
     } catch (error) {
       console.log(error);
     }
